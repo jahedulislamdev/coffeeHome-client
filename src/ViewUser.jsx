@@ -4,6 +4,7 @@ import Back from './Back';
 
 const ViewUser = () => {
    const user = useLoaderData();
+
    return (
       <div className='min-h-screen bg-base-200'>
          <Back />

@@ -13,6 +13,7 @@ import Login from './Login'
 import Register from './Register'
 import Dashboard from './Dashboard'
 import ViewUser from './ViewUser'
+import UpdateUser from './UpdateUser'
 
 const route = createBrowserRouter([
   {
@@ -54,6 +55,11 @@ const route = createBrowserRouter([
   },
   {
     path: "/user/details/:id", element: <ViewUser />,
+    loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`),
+    hydrateFallbackElement: <Fallback />,
+  },
+  {
+    path: "/user/update/:id", element: <UpdateUser />,
     loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`),
     hydrateFallbackElement: <Fallback />,
   }

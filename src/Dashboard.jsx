@@ -82,9 +82,9 @@ const Dashboard = () => {
                                  <Link to={`/user/details/${user._id}`} className="btn px-1 btn-sm btn-ghost text-info tooltip" data-tip="View">
                                     <FaRegEye className="text-xl" />
                                  </Link>
-                                 <button className="btn px-1 btn-sm btn-ghost text-warning tooltip" data-tip="Edit">
+                                 <Link to={`/user/update/${user._id}`} className="btn px-1 btn-sm btn-ghost text-warning tooltip" data-tip="Edit">
                                     <FaEdit className="text-xl" />
-                                 </button>
+                                 </Link>
                                  <button onClick={() => handleDelete(user._id)} className="btn px-1 btn-sm btn-ghost text-error tooltip" data-tip="Delete">
                                     <MdDelete className="text-xl" />
                                  </button>
