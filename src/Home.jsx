@@ -4,9 +4,25 @@ import { FiCoffee } from "react-icons/fi";
 import Footer from "./Footer";
 
 const Home = () => {
-
    return (
       <div>
+         <div>
+            <nav>
+               <div className="navbar bg-base-100">
+                  <div className="flex-1">
+                     <Link to={'/'} className="btn btn-ghost normal-case text-xl">Coffee House</Link>
+                  </div>
+                  <div className="flex-none">
+                     <ul className="menu menu-horizontal p-0 space-x-7">
+                        <li><Link to={'/'}>Home</Link></li>
+                        <li><Link to={'/login'}>Login</Link></li>
+                        <li><Link to={'/register'}>Register</Link></li>
+                        <li><Link to={'/dashboard'}>Dashboard</Link></li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+         </div>
          <div>
             <img className='' src="https://i.postimg.cc/wvTBrJg8/Group-68.png" />
          </div>

@@ -8,10 +8,22 @@ import Products from './Products'
 import Detail from './Detail'
 import Update from './Update'
 import Fallback from './Fallback'
+import AuthProvider from '../Provider/AuthProvider'
+import Login from './Login'
+import Register from './Register'
+import Dashboard from './Dashboard'
+import ViewUser from './ViewUser'
 
 const route = createBrowserRouter([
-  { path: '/', element: <Home />, loader: () => fetch("http://localhost:5000/coffees") },
-  { path: "/products", element: <Products />, hydrateFallbackElement: <Fallback /> },
+  {
+    path: '/', element: <Home />,
+    loader: () => fetch("http://localhost:5000/coffees"),
+    hydrateFallbackElement: <Fallback />
+  },
+  {
+    path: "/products", element: <Products />,
+    hydrateFallbackElement: <Fallback />
+  },
   {
     path: "/products_detail/:id", element: <Detail />,
     loader: ({ params }) => fetch(`http://localhost:5000/coffees/${params.id}`),
@@ -26,11 +38,31 @@ const route = createBrowserRouter([
     path: "/update_coffee/:id", element: <Update />,
     loader: ({ params }) => fetch(`http://localhost:5000/coffees/${params.id}`),
     hydrateFallbackElement: <Fallback />
+  },
+  {
+    path: "/login", element: <Login />,
+    hydrateFallbackElement: <Fallback />
+  },
+  {
+    path: "/register", element: <Register />,
+    hydrateFallbackElement: <Fallback />
+  },
+  {
+    path: "/dashboard", element: <Dashboard />,
+    loader: () => fetch("http://localhost:5000/users"),
+    hydrateFallbackElement: <Fallback />,
+  },
+  {
+    path: "/user/details/:id", element: <ViewUser />,
+    loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`),
+    hydrateFallbackElement: <Fallback />,
   }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={route} />
+    <AuthProvider>
+      <RouterProvider router={route} />
+    </AuthProvider>
   </StrictMode>
 )
