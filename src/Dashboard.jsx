@@ -46,7 +46,7 @@ const Dashboard = () => {
    return (
       <div className='bg-base-200 p-2'>
          <Back />
-         <div className='flex items-center justify-center p-5'>
+         <div className='flex items-center justify-center h-80 p-5'>
             <div className="overflow-x-auto rounded-box border border-base-content/10 shadow-lg bg-base-100 w-full max-w-6xl">
                <table className="table table-zebra text-base-content">
                   {/* Table Head */}

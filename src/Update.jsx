@@ -1,7 +1,6 @@
 import React from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
 import { useLoaderData, useNavigate } from 'react-router-dom';
-import Footer from './Footer';
 
 const Update = () => {
    const updateCoffee = useLoaderData();
@@ -40,7 +39,7 @@ const Update = () => {
          ).catch(err => console.error(err));
    }
    return (
-      <div className="min-h-screen bg-base-100">
+      <div className="min-h-screen bg-base-100 ">
          {/* Back button */}
          <div className="max-w-4xl mx-auto my-6">
             <button
@@ -163,7 +162,6 @@ const Update = () => {
                </div>
             </form>
          </div>
-         <Footer />
       </div>
    );
 };

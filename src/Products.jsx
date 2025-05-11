@@ -43,17 +43,17 @@ const Products = () => {
          <div className='grid grid-cols-2 gap-4 container mx-auto'>
             {
                products.map(product => (
-                  <div key={product._id} className='border border-gray-700 p-2 md:p-4 bg-gray-600 rounded flex justify-between items-center'>
-                     <img className='w-32 md:w-42 object-cover rounded-t-2xl' src={product.photo} alt="" />
+                  <div key={product._id} className='border border-gray-700 p-2 md:p-8 bg-base-200 rounded flex justify-between items-center text-base-content/60'>
+                     <img className=' w-42 h-42 object-center object-cover rounded-t-2xl' src={product.photo} alt="" />
                      <div>
                         <h2 className='text-lg font-bold'><span className='font-semibold'>Name: </span>{product.name}</h2>
                         <p className='font-light'><span className='font-semibold text-md'>Chef: </span>{product.chef}</p>
                         <p className='font-light'><span className='font-semibold text-md'>Price: </span>{product.price}</p>
                      </div>
-                     <div className='flex flex-col gap-2'>
-                        <Link to={`/products_detail/${product._id}`} className='cursor-pointer opacity-60 bg-gray-500 p-3 rounded-lg'><MdRemoveRedEye className='size-5' /></Link>
-                        <Link to={`/update_coffee/${product._id}`} className='cursor-pointer opacity-60 bg-yellow-800 p-3 rounded-lg'><MdEdit className='size-5' /></Link>
-                        <button onClick={() => handleDelete(product._id)} className='cursor-pointer opacity-60 bg-red-600 p-3 rounded-lg'><MdDelete className='size-5' /></button>
+                     <div className='flex flex-col gap-2 opacity-40'>
+                        <Link to={`/products_detail/${product._id}`} className='cursor-pointer bg-gray-500 p-3 rounded-lg'><MdRemoveRedEye className='size-5' /></Link>
+                        <Link to={`/update_coffee/${product._id}`} className='cursor-pointer bg-yellow-800 p-3 rounded-lg'><MdEdit className='size-5' /></Link>
+                        <button onClick={() => handleDelete(product._id)} className='cursor-pointer bg-red-600 p-3 rounded-lg'><MdDelete className='size-5' /></button>
                      </div>
                   </div>
                ))

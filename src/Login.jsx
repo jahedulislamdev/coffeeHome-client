@@ -33,9 +33,9 @@ const Login = () => {
    }
 
    return (
-      <div color='bg-gray-950'>
+      <div color='bg-gray-950 mb-10'>
          <Back />
-         <div className="min-h-screen flex items-center justify-center px-4">
+         <div className="h-screen flex items-center justify-center px-4">
             <div className="w-full max-w-md bg-gray-900 p-8 rounded-2xl shadow-lg">
                <h2 className="text-2xl font-semibold text-center opacity-60 mb-6">Login to Your Account</h2>
                <form onSubmit={handleFormSubmit} className="space-y-4">
