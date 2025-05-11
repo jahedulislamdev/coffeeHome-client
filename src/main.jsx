@@ -21,7 +21,7 @@ const route = createBrowserRouter([
     path: '/', element: <Layout />, children: [
       {
         path: '/', element: <Home />,
-        loader: () => fetch("http://localhost:5000/coffees"),
+        loader: () => fetch("https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app"),
         hydrateFallbackElement: <Fallback />
       },
       {
@@ -30,17 +30,17 @@ const route = createBrowserRouter([
       },
       {
         path: "/products_detail/:id", element: <Detail />,
-        loader: ({ params }) => fetch(`http://localhost:5000/coffees/${params.id}`),
+        loader: ({ params }) => fetch(`https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app/${params.id}`),
         hydrateFallbackElement: <Fallback />
       },
       {
         path: "/add_coffee", element: <App />,
-        loader: () => fetch("http://localhost:5000/coffees"),
+        loader: () => fetch("https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app"),
         hydrateFallbackElement: <Fallback />
       },
       {
         path: "/update_coffee/:id", element: <Update />,
-        loader: ({ params }) => fetch(`http://localhost:5000/coffees/${params.id}`),
+        loader: ({ params }) => fetch(`https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app/${params.id}`),
         hydrateFallbackElement: <Fallback />
       },
       {
@@ -53,17 +53,17 @@ const route = createBrowserRouter([
       },
       {
         path: "/dashboard", element: <Dashboard />,
-        loader: () => fetch("http://localhost:5000/users"),
+        loader: () => fetch("https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app"),
         hydrateFallbackElement: <Fallback />,
       },
       {
         path: "/user/details/:id", element: <ViewUser />,
-        loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`),
+        loader: ({ params }) => fetch(`https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app/${params.id}`),
         hydrateFallbackElement: <Fallback />,
       },
       {
         path: "/user/update/:id", element: <UpdateUser />,
-        loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`),
+        loader: ({ params }) => fetch(`https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app/${params.id}`),
         hydrateFallbackElement: <Fallback />,
       }
     ]

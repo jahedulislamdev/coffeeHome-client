@@ -20,7 +20,7 @@ const Dashboard = () => {
          confirmButtonText: 'Yes, delete it!'
       }).then(res => {
          if (res.isConfirmed) {
-            fetch(`http://localhost:5000/users/${id}`, {
+            fetch(`https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app/${id}`, {
                method: "DELETE",
                headers: { "content-type": "application/josn" },
                body: JSON.stringify(id)

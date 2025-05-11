@@ -17,7 +17,7 @@ const Products = () => {
          confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
          if (result.isConfirmed) {
-            fetch(`http://localhost:5000/coffees/${id}`, {
+            fetch(`https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app/${id}`, {
                method: "DELETE"
             })
                .then(res => res.json())

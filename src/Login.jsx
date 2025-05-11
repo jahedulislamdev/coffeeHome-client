@@ -17,7 +17,7 @@ const Login = () => {
             console.log(res.user)
             const loggedUserData = { email, lastLogAt: res.user?.metadata?.lastSignInTime }
             // save login information to the database
-            fetch('http://localhost:5000/users', {
+            fetch('https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app', {
                method: "PUT",
                headers: {
                   "content-type": "application/json"

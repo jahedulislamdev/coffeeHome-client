@@ -11,7 +11,7 @@ const UpdateUser = () => {
       const name = form.name.value;
       const updatedData = { name }
       console.log(updatedData)
-      fetch(`http://localhost:5000/users/update/${userData._id}`, {
+      fetch(`https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app/update/${userData._id}`, {
          method: "PUT",
          headers: { "content-type": "application/json" },
          body: JSON.stringify(updatedData)
