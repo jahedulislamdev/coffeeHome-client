@@ -1,8 +1,6 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Products from "./Products";
 import { FiCoffee } from "react-icons/fi";
-import Footer from "./Footer";
-import Nav from "./Nav";
 
 const Home = () => {
    return (

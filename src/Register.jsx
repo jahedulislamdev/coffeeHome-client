@@ -18,7 +18,7 @@ const Register = () => {
 
             // Save user data to the database
             const user = { name, email, password, createdAt: res.user?.metadata?.createdAt, uid: res.user?.uid };
-            fetch("https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app", {
+            fetch("http://localhost:5000/users", {
                method: "POST",
                headers: {
                   "content-type": "application/json",

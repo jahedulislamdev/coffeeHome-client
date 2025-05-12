@@ -21,7 +21,7 @@ const App = () => {
 
     console.log(coffeeData);
     // post data to the server
-    fetch("https://coffee-home-server-jahedulislamdev-jishans-projects-05907be7.vercel.app", {
+    fetch("http://localhost:5000/coffees", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(coffeeData)
